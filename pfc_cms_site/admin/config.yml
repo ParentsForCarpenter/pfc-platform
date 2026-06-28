@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "Global Settings"
+        name: "global_settings"
+        format: "json"
+        fields:
+          - {label: "Site Title", name: "siteTitle", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Address Line 1", name: "addressLine1", widget: "string"}
+          - {label: "Address Line 2", name: "addressLine2", widget: "string"}
+          - {label: "Address Line 3", name: "addressLine3", widget: "string"}
+          - {label: "EIN", name: "ein", widget: "string"}
+          - {label: "Member Portal URL", name: "memberPortalUrl", widget: "string"}
+          - {label: "Support URL", name: "supportUrl", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Footer Image", name: "footerImage", widget: "image"}
+          - {label: "Footer Message", name: "footerMessage", widget: "string"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/pages.json"
+        label: "All Pages"
+        name: "all_pages"
+        format: "json"
+        fields:
+          - label: "Pages"
+            name: "pages"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Page Title", name: "title", widget: "string"}
+              - {label: "URL Slug", name: "slug", widget: "string", hint: "Use blank for Home. Example: about-pfc"}
+              - {label: "Navigation Title", name: "navTitle", widget: "string"}
+              - {label: "Show in Top Navigation", name: "showInNav", widget: "boolean", default: true}
+              - {label: "Hero Image / Main Photo", name: "heroImage", widget: "image", hint: "Best: landscape photo, 2400 x 1350 px."}
+              - {label: "Hero Title", name: "heroTitle", widget: "string"}
+              - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+              - {label: "Button Text", name: "buttonText", widget: "string", required: false}
+              - {label: "Button URL", name: "buttonUrl", widget: "string", required: false}
+              - label: "Text Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - {label: "Heading", name: "heading", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Cards / Links"
+                name: "cards"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Card Title", name: "title", widget: "string"}
+                  - {label: "Card Text", name: "text", widget: "text"}
+                  - {label: "Card Link", name: "url", widget: "string"}
