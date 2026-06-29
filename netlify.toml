@@ -1,8 +1,23 @@
 [build]
   publish = "."
-  command = "npm run build"
+  command = ""
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/about-us"
+  to = "/about-us/"
+  status = 301
+
+[[redirects]]
+  from = "/programs"
+  to = "/programs/"
+  status = 301
+
+[[redirects]]
+  from = "/support-us"
+  to = "/support-us/"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact-us/"
+  status = 301
