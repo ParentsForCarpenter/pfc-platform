@@ -1,25 +1,13 @@
-# Parents for Carpenter Launch Website
+# Parents for Carpenter — Phase 1 Launch Fixed
 
-This is the Google-ready launch version for ParentsForCarpenter.org.
+Run locally:
 
-## Launch scope
-- Home
-- About PFC
-- Programs
-- Support PFC
-- Community Partners
-- Contact Us
-- Program detail placeholder pages
+```bash
+npm run dev
+```
 
-## Membership Toolkit
-Membership Toolkit remains the operational platform for member login, donor forms, family data, and AGC workflows.
+Open `http://localhost:5173/`.
 
-## Links
-- Member Portal: https://pfc.membershiptoolkit.com
-- Annual Giving / Donate: https://pfc.membershiptoolkit.com/login-form?r=%2Fopen_forms
-- Contact: mailto:CarpenterPFC@ParentsForCarpenter.org
+This version creates real folders for `/about-us/`, `/programs/`, `/support-us/`, and `/contact-us/`, so clean URLs work with the local Python server and Netlify.
 
-## Netlify settings
-- Base directory: pfc_cms_site if this folder is inside pfc_cms_site
-- Build command: blank
-- Publish directory: .
+Press `D` to show or hide hotspot debug mode.
